@@ -1,0 +1,143 @@
+/* body and heading styles */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    background-image: linear-gradient( rgb(247, 97, 81), rgb(250, 231, 161));
+    font-weight: bold;
+}
+
+h1 {
+    color: white;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 1.25em;
+}
+
+
+/* header styles */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    margin: 1em;
+    font-size: 1.25em;
+}
+
+nav ul a {
+    padding: 0 4em;
+    color: white;
+    text-decoration: transparent;
+    transition: text-decoration 0.75s;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+
+/* main styles */
+
+main {
+    margin: 0;
+}
+
+.slideshow {
+    /* background-image: url('./../Imagery/Dopamine.jpg'); */
+    background-color: rgba(255, 255, 255, 0.03);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 2em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 1.4em;
+    box-shadow: 0 0 1.5em white;
+    border-radius: 10em;
+    color: white
+}
+
+.slideshow__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1.75em;
+    padding-bottom: 0.5em;
+    align-items: center;
+}
+
+#paragraph {
+    margin-left: 1em;
+    padding-top: 1.2em;
+    text-align: center;
+}
+
+#logo {
+    width: 17em;
+    align-self: flex-end;
+    padding-top: 1.5em;
+    padding-left: 2.5em;
+    max-width: 100%;
+}
+
+#arrow {
+    margin: 1em;
+    padding-top: 0.5em;
+    width: 2.75em;
+}
+
+.slideshow__dots {
+    font-size: 2.5em;
+    align-self: center;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li {
+        padding: 1em 0;
+        text-align: center;
+    }
+    #logo {
+        display: none;
+    }
+    .slideshow__content {
+        padding: 0;
+    }
+    #paragraph {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    .slideshow__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo {
+        display: none;
+    }
+    .slideshow__content {
+        padding: 0;
+    }
+    #paragraph {
+        margin-left: 0;
+        text-align: center;
+    }
+}
